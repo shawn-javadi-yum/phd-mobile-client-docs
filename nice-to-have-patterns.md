@@ -56,6 +56,20 @@
                   return productsToRender.map(product => <SomeElement />)
               }
 
+      - Encapsulate boolean expressions for readability
+        - Bad:
+          - ```javascript
+            if (someArray.length > 2 && someArray[0].id === "someId") {
+                ...
+            }
+        - Good:
+          - ```javascript
+            const isSomeCondition = someArray.length > 2 && someArray[0].id === "someId";
+
+            if (isSomeCondition) {
+                ...
+            }
+
       - Function names should explain what they do
          - Bad:
           - ```javascript
