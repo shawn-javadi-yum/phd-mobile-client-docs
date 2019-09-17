@@ -69,7 +69,10 @@
             if (isSomeCondition) {
                 ...
             }
-
+      - Prefer using native JS features over outside sources/lodash
+        - Modern JS Array/Number/String prototype functions are faster and generally more reliable
+        - This is specially true on the mobile side since we don't have to worry about browser compatibility 
+        - On flip side no need to reinvent the wheel from scratch if an outside library can save time/provide an already tested/stable solution
       - Function names should explain what they do
          - Bad:
           - ```javascript
