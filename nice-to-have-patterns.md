@@ -9,6 +9,9 @@
             - TBD
           - Bad:
             - TBD
+      - Avoid using index.js for React component names
+        - This will help avoid having 10+ index.js tabs open in the editor
+        - It will also help make the components searchable using fuzzy search
     - Code
       - Use meaningful/descriptive names
         - Bad:
