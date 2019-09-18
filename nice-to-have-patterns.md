@@ -72,6 +72,7 @@
       - Prefer using native JS features over outside sources/lodash
         - Modern JS Array/Number/String prototype functions are faster and generally more reliable
         - This is specially true on the mobile side since we don't have to worry about browser compatibility 
+        - If we do decide to add an outside library it should be voted on as a team first before being added
         - On flip side no need to reinvent the wheel from scratch if an outside library can save time/provide an already tested/stable solution
       - Function names should explain what they do
          - Bad:
