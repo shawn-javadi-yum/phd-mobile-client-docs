@@ -1,0 +1,74 @@
+
+- Workflow Gaps
+    - Communication with/from api/cms team
+      - As of now the communication from the above teams leaves a lot to be desired. this is especially true regarding breaking changes.
+      - Api/cms team should communicate breaking changes/etc to us and vice versa.
+      - Action Items:
+        - Put together action list for technical intake of new features (investigation and documentation of similar features if applicable, and so on)
+        - Either intake or create user flows and replicate with Postman calls (in the case of value line up, editing a recipe pizza etc)
+
+    - Documentation
+      - As of now the folder structure in the project has no documentation
+      - As of now none of the logic on the mobile client is documented
+        - This will be essential as we move forward with OneBuilder and other abstractions that we've added. Especially since we have new devs joining.
+      - Action Items
+        - Document new abstractions that we've added
+          - OneBuilder
+          - Smart reducers
+          - Sagas
+          - etc
+        - Document legacy code in the following major pieces
+          - Login flow
+          - Api calls
+          - Guest user
+          - Redux usage
+          - etc
+
+    - Single source of truth for standards
+      - As of now there is no single source of truth for standards
+      - Standards should be documented
+      - There exists a standards document for the web client, however mobile client would benefit from keeping its own standards document
+      - Action Items:
+        - Decide on plan for documentating standards
+        - Create standards document (or not based on action item above)
+
+    - Code Review
+      - As of now code review process is not being followed (obviously due to deadlines)
+      - Need to ensure that code review comments are productive
+      - [Great resource for ensuring that code review is productive ](https://mtlynch.io/human-code-reviews-1/#settle-style-arguments-with-a-style-guide)
+      - [Part 2](https://mtlynch.io/human-code-reviews-2/#offer-sincere-praise)
+        - TLDR:
+          - Be proactive with examples
+          - Criticize the work not the person
+          - Tie comments to principles
+            - "We should split this class in two"
+            - vs
+            - "We should split this class in two, because performance blah blah blah"
+          - Phrase feedback as request not commands
+            - Can we/Shouldn't this/Wouldn't a better way/etc
+          - Prefer commenting on architecture over style
+            - abstract style to a styleguide/linter
+
+    - Linting
+      - As of now linting is not a part of our process in this project
+      - However we do have eslint and the airbnb linting package installed
+      - PRs sometimes littered with auto formatted code which makes it hard to review what actually was changed
+      -
+      - Action Items:
+        - Decide on linting rules
+        - Implement linter
+        - Add linting to build pipeline
+        - Optionally implement Prettier to abstract away having to manually fix lint issues
+
+    - Testing
+      - As of now none of the UI/logic is unit tested
+      - As a result the UI/logic we're writing is not being written with testing in mind.
+      - As a result UI/logic is brittle and is bound to have edge cases where bugs occur. This is especially true with a lot of the utility functions that are in the project (looking at you Iso... past consulting company)
+      - Testing should ideally be part of story
+      - Testing should ideally be done along side development and not saved for the end
+      - At a minimum utility functions/common components/other things we abstract away to reuse should be unit tested
+      -
+      - Action Items:
+        - Decide on testing patterns
+        - Decide on types of tests we want
+
